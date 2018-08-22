@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/mitchellh/cli"
-	"github.com/pshima/consul-snapshot/backup"
+	"github.com/pshima/shabbir-taulia/backup"
 )
 
 // BackupCommand for running backups
