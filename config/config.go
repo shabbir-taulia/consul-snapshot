@@ -78,6 +78,10 @@ func setEnvVars(conf *Config, tests bool) error {
 		backupInterval = "60"
 	}
 
+	if conf.Encryption == "" {
+		log.fatal("No encryption password provided")
+	}
+
 	backupStrToInt, err := strconv.Atoi(backupInterval)
 	if err != nil {
 		return fmt.Errorf("Unable to convert BACKUPINTERVAL environment var to integer: %v", err)

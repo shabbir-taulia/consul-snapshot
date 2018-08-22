@@ -108,6 +108,8 @@ func doWork(conf *config.Config, client *consul.Consul) error {
 		Client: client,
 	}
 
+	log.Printf("%d", b.Config.Encryption)
+
 	// Loop over and over at interval time.
 	b.StartTime = time.Now().Unix()
 
@@ -170,6 +172,7 @@ func doWork(conf *config.Config, client *consul.Consul) error {
 	b.compressStagedBackup()
 
 	if b.Config.Encryption != "" {
+		log.Print("[INFO] Found Encryption Password, encrypting backup!")
 		crypt.EncryptFile(b.LocalFilePath, b.Config.Encryption)
 	}
 
