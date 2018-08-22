@@ -78,7 +78,7 @@ func setEnvVars(conf *Config, tests bool) error {
 		backupInterval = "60"
 	}
 
-	if conf.Encryption == "" {
+	if len(conf.Encryption) == 0 {
 		log.fatal("No encryption password provided")
 	}
 
