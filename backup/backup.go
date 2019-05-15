@@ -20,7 +20,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 	consulapi "github.com/hashicorp/consul/api"
 	"github.com/mholt/archiver"
-	"github.com/shabbir-taulia/consul-snapshot/config"
+	"github.com/pshima/consul-snapshot/config"
 	"github.com/pshima/consul-snapshot/consul"
 	"github.com/pshima/consul-snapshot/crypt"
 	"github.com/pshima/consul-snapshot/health"
