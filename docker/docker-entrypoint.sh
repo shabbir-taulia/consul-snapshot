@@ -6,13 +6,11 @@ run_app() {
 
 case "${1}" in
   'backup')
-    run_app "${1}" "${2}"
-    exit 0
+    run_app "${1}"
     ;;
 
   'restore')
-    run_app "${1}" `cat "${2}"`
-    exit 0
+    run_app "${@}"
     ;;
 
   *)
